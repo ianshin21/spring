@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;annotationContext&apos; from expression &apos;new AnnotationConfigApplicationContext(SpringJavaConfig.class)&apos;&#x0D;&#x0A;- Original project: &apos;02_SpringDI&apos;&#x0D;&#x0A;- Variable name: &apos;annotationContext&apos;&#x0D;&#x0A;- Destination method: &apos;com.kh.di.owner.OwnerTest.contextTest()&apos;&#x0D;&#x0A;- Variable expression: &apos;new AnnotationConfigApplicationContext(SpringJavaConfig.class)&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;annotationContext&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src\/test\/java=/test=/true=/=/optional=/true=/=/maven.pomderived=/true=/&lt;com.kh.di.owner{OwnerTest.java" name="annotationContext" replace="true" selection="1982 0" stamp="1613523808957" varType="false" version="1.0"/>
+</session>

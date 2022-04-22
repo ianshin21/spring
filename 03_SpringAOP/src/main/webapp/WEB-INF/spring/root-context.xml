@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<!-- AspectJ 어노테이션을 사용한 에스펙트 적용을 위한 프록시 설정 ; 
+			이것만 있으면 com.kh.aop.aspect.CharacterAspect에 어노테이션 붙여서 해결 -->
+			
+	<aop:aspectj-autoproxy/>		
+	
+		<!--	다음은 interface로 직접 가는 것이 아니라 interface를 구현한 클래스 객체로 바로 갈 때 사용
+				: Character.java에서 private Job job가 아니라 => private Warrior job   이렇게 설정되어 있어도 작동
+	<aop:aspectj-autoproxy proxy-target-class="true" />				
+			-->
+
+	
+	<bean id="character" class="com.kh.aop.character.Character" p:name="문인수" p:level="90" p:job-ref="wizard"/>
+	
+	<bean id="wizard" class="com.kh.aop.job.Wizard" p:name="마법사"/>
+	
+	<bean id="warrior" class="com.kh.aop.job.Warrior" p:name="전사"/>
+	
+	<bean id="characterAspect" class="com.kh.aop.aspect.CharacterAspect"/>
+	
+	<!--
+	<aop:config>
+		<aop:aspect ref="characterAspect">
+		
+			<aop:pointcut id="questPointcut"
+			 	expression="execution(* com.kh.aop.character.Character.quest(..)) and args(questName)" />
+			 
+			 
+			<aop:before 
+				pointcut="execution(* com.kh.aop.character.Character.quest(..))"
+				method="beforeQuest"/>
+			  
+			<aop:after 
+				pointcut="execution(* com.kh.aop.character.Character.quest(..))"
+				method="afterQuest"/>
+			
+			<aop:after-returning 
+				pointcut-ref="questPointcut"
+				method="questSuccess"/>
+				
+			<aop:after-throwing 
+				pointcut-ref="questPointcut"
+				method="questFail"/>
+			
+			<aop:around
+				pointcut="execution(* com.kh.aop.character.Character.quest(..))"
+			 	method="aroundQuest"/>
+			 	
+		</aop:aspect>
+	</aop:config>
+	-->
+	
+	
+</beans>

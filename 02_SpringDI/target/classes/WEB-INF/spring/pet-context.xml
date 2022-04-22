@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	 <!-- 
+	<bean id="cat" class="com.kh.di.pet.Cat">
+		<constructor-arg name="name" value="때껄룩"/>
+	</bean>	
+	 -->
+	 <!--  
+	 <bean id="cat" class="com.kh.di.pet.Cat" p:name="때껄룩"/>
+	 -->
+	 	 <!-- schema/p가 있어야 p nameSpace를 쓸수 있다. property 대신으로-->
+	 
+	 <bean id="cat" class="com.kh.di.pet.Cat" c:_="때껄룩"/>
+	 <!--  생성자 매개변수가 하나 밖에 없을 때는  c:name= 대신에 c:_= 이렇게 해도 된다. -->
+	 
+	 
+	<bean id="dog" class="com.kh.di.pet.Dog">
+		<property name="name" value="댕댕이"/>
+	</bean>
+</beans>

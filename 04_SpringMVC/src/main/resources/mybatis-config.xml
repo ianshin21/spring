@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+
+	<!-- 
+	<typeAliases>
+		<typeAlias type="com.kh.mvc.member.model.vo.Member" alias="Member"/>
+	</typeAliases>
+	 -->
+	 
+  <!--  DB에 사용되는 쿼리문들을 담은 mapper파일을 등록 하는 부분 
+  <mappers>
+  	<mapper resource="mappers/member/member-mapper.xml"/>
+  	<mapper resource="mappers/board/board-mapper.xml"/>
+  </mappers>
+  -->
+</configuration>
+
+
+

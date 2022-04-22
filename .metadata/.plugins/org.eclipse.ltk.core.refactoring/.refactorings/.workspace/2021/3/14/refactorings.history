@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;05_SpringSecurity&apos; to &apos;05_1_SpringSecurity&apos;" description="Rename resource &apos;05_SpringSecurity&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/05_SpringSecurity" name="05_1_SpringSecurity" stamp="1617136360760" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;05_1_SpringSecurity&apos; to &apos;05_SpringSecurity&apos;" description="Rename resource &apos;05_1_SpringSecurity&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/05_1_SpringSecurity" name="05_SpringSecurity" stamp="1617136423507" updateReferences="true"/>
+</session>

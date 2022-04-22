@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
+<c:set var="path" value="${ pageContext.request.contextPath }"/>
+
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+<h1>
+	Hello world!  
+</h1>
+
+<P>  The time on the server is ${serverTime}. </P>
+<p>
+		<a href="${path}/board/list">
+			게시글 조회
+		</a>
+</p>
+
+<c:if test="${ loginMember == null }">
+	<form action="login" method="POST">
+		아이디 : <input type="text" name="userId" required/><br>
+		비밀번호 : <input type="password" name="userPwd"/><br>
+		
+	<button type="button" onclick="location.href='${ path }/member/enroll'">회원 가입</button>
+		<input type="submit" value="로그인"/>
+	</form>
+</c:if>
+
+<c:if test="${ loginMember != null }">
+	<a href="${path}/member/myPage">
+		${ loginMember.userName }
+	</a> 님, 안녕하세요.
+	
+	<button type="button" onclick="location.replace('${ path }/logout')">로그아웃</button>
+	
+	<p>
+	
+
+</c:if>
+
+</body>
+</html>

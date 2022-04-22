@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="99_SpringMVC_java"/>
+<aop-project name="01_Spring"/>
+<aop-project name="03_SpringAOP"/>
+<aop-project name="06_Test"/>
+<aop-project name="05_SpringSecurity"/>
+<aop-project name="04_SpringMVC"/>
+<aop-project name="02_SpringDI"/>
+</aop-reference-model>

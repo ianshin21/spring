@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;03_SpringAOP/src/main/java/com/kh/aop/aspect/QuestAspect.java&apos; to &apos;CharacterAspect.java&apos;" description="Rename resource &apos;QuestAspect.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/com/kh/aop/aspect/QuestAspect.java" name="CharacterAspect.java" stamp="1613634328835" updateReferences="true"/>
+</session>

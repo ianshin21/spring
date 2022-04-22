@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- 
+	생성자를 통한 의존성 주입
+	<bean id="owner" class="com.kh.di.owner.Owner">
+		<constructor-arg index="0" value="문인수"/>
+		<constructor-arg index="1" value="20"/>
+		<constructor-arg index="2" ref="cat"/>
+	</bean>	
+	 
+	 Setter 메소드를 통한 의존성 주입
+	 <bean id="owner" class="com.kh.di.owner.Owner">
+	 	<property name="name" value="ismoon"/>
+	 	<property name="age" value="21"/>
+	 	<property name="pet" ref="dog"/>
+	 </bean>
+	 -->
+	 
+	 <bean id="owner" class="com.kh.di.owner.Owner" c:name="문인수" c:_1="20" c:pet-ref="cat"/>  
+	 	<!-- schema/c가 있어야 c nameSpace를 쓸수 있다. : constructor 대신으로 -->
+	 
+	<import resource="pet-context.xml"/>
+	
+</beans>
